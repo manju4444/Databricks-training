@@ -1,1 +1,399 @@
+**Schema (MySQL v5.7)**
 
+    -- Create Department table
+    CREATE TABLE Department (
+        department_id INT PRIMARY KEY,
+        name VARCHAR(50) NOT NULL
+    );
+    
+    -- Create Employee table
+    CREATE TABLE Employee (
+        emp_id INT PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        age INT,
+        salary DECIMAL(10, 2),
+        department_id INT,
+        hire_date DATE,
+        FOREIGN KEY (department_id) REFERENCES Department(department_id)
+    );
+    
+    -- Create Project table
+    CREATE TABLE Project (
+        project_id INT PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        department_id INT,
+        FOREIGN KEY (department_id) REFERENCES Department(department_id)
+    );
+    
+    -- Insert data into Department table
+    INSERT INTO Department (department_id, name) VALUES
+    (1, 'IT'),
+    (2, 'HR'),
+    (3, 'Finance'),
+    (4, 'Marketing');
+    
+    -- Insert data into Employee table
+    INSERT INTO Employee (emp_id, name, age, salary, department_id, hire_date) VALUES
+    (1, 'John Doe', 28, 50000.00, 1, '2020-01-15'),
+    (2, 'Jane Smith', 34, 60000.00, 2, '2019-07-23'),
+    (3, 'Bob Brown', 45, 80000.00, 1, '2018-02-12'),
+    (4, 'Alice Blue', 25, 45000.00, 3, '2021-03-22'),
+    (5, 'Charlie P.', 29, 50000.00, 2, '2019-12-01'),
+    (6, 'David Green', 38, 70000.00, 4, '2022-05-18'),
+    (7, 'Eve Black', 40, 55000.00, 3, '2021-08-30');
+    
+    -- Insert data into Project table
+    INSERT INTO Project (project_id, name, department_id) VALUES
+    (1, 'Project Alpha', 1),
+    (2, 'Project Beta', 2),
+    (3, 'Project Gamma', 1),
+    (4, 'Project Delta', 3),
+    (5, 'Project Epsilon', 4),
+    (6, 'Project Zeta', 4),
+    (7, 'Project Eta', 3);
+    
+    -- Insert additional data into Department table (if needed)
+    -- No additional departments needed for this data set
+    
+    -- Insert additional data into Employee table to test edge cases for joins and nested queries
+    INSERT INTO Employee (emp_id, name, age, salary, department_id, hire_date) VALUES
+    (8, 'Frank White', 32, 48000.00, NULL, '2021-07-10'),  -- Employee without a department
+    (9, 'Grace Kelly', 27, 65000.00, 1, '2018-11-13'),
+    (10, 'Hannah Lee', 30, 53000.00, 4, '2020-02-25');
+    
+    -- Insert additional data into Project table to test edge cases for joins
+    INSERT INTO Project (project_id, name, department_id) VALUES
+    (8, 'Project Theta', 1),
+    (9, 'Project Iota', NULL);  -- Project without a department
+
+---
+
+**Query #1**
+
+    -- 1. Get all employees
+    SELECT * FROM Employee;
+
+| emp_id | name        | age | salary  | department_id | hire_date  |
+| ------ | ----------- | --- | ------- | ------------- | ---------- |
+| 1      | John Doe    | 28  | 50000.0 | 1             | 2020-01-15 |
+| 2      | Jane Smith  | 34  | 60000.0 | 2             | 2019-07-23 |
+| 3      | Bob Brown   | 45  | 80000.0 | 1             | 2018-02-12 |
+| 4      | Alice Blue  | 25  | 45000.0 | 3             | 2021-03-22 |
+| 5      | Charlie P.  | 29  | 50000.0 | 2             | 2019-12-01 |
+| 6      | David Green | 38  | 70000.0 | 4             | 2022-05-18 |
+| 7      | Eve Black   | 40  | 55000.0 | 3             | 2021-08-30 |
+| 8      | Frank White | 32  | 48000.0 |               | 2021-07-10 |
+| 9      | Grace Kelly | 27  | 65000.0 | 1             | 2018-11-13 |
+| 10     | Hannah Lee  | 30  | 53000.0 | 4             | 2020-02-25 |
+
+---
+**Query #2**
+
+    -- 2. Get employees with salary > 60000
+    SELECT name, salary 
+    FROM Employee
+    WHERE salary > 60000;
+
+| name        | salary  |
+| ----------- | ------- |
+| Bob Brown   | 80000.0 |
+| David Green | 70000.0 |
+| Grace Kelly | 65000.0 |
+
+---
+**Query #3**
+
+    -- 3. List employees sorted by hire date
+    SELECT name, hire_date
+    FROM Employee
+    ORDER BY hire_date ASC;
+
+| name        | hire_date  |
+| ----------- | ---------- |
+| Bob Brown   | 2018-02-12 |
+| Grace Kelly | 2018-11-13 |
+| Jane Smith  | 2019-07-23 |
+| Charlie P.  | 2019-12-01 |
+| John Doe    | 2020-01-15 |
+| Hannah Lee  | 2020-02-25 |
+| Alice Blue  | 2021-03-22 |
+| Frank White | 2021-07-10 |
+| Eve Black   | 2021-08-30 |
+| David Green | 2022-05-18 |
+
+---
+**Query #4**
+
+    -- 4. Employees with their department names
+    SELECT e.name, d.name AS department
+    FROM Employee e
+    INNER JOIN Department d
+    ON e.department_id = d.department_id;
+
+| name        | department |
+| ----------- | ---------- |
+| John Doe    | IT         |
+| Bob Brown   | IT         |
+| Grace Kelly | IT         |
+| Jane Smith  | HR         |
+| Charlie P.  | HR         |
+| Alice Blue  | Finance    |
+| Eve Black   | Finance    |
+| David Green | Marketing  |
+| Hannah Lee  | Marketing  |
+
+---
+**Query #5**
+
+    -- 5. Include employees without departments (LEFT JOIN)
+    SELECT e.name, d.name AS department
+    FROM Employee e
+    LEFT JOIN Department d
+    ON e.department_id = d.department_id;
+
+| name        | department |
+| ----------- | ---------- |
+| John Doe    | IT         |
+| Bob Brown   | IT         |
+| Grace Kelly | IT         |
+| Jane Smith  | HR         |
+| Charlie P.  | HR         |
+| Alice Blue  | Finance    |
+| Eve Black   | Finance    |
+| David Green | Marketing  |
+| Hannah Lee  | Marketing  |
+| Frank White |            |
+
+---
+**Query #6**
+
+    -- 6. Departments and their projects
+    SELECT d.name AS department, p.name AS project
+    FROM Department d
+    LEFT JOIN Project p
+    ON d.department_id = p.department_id;
+
+| department | project         |
+| ---------- | --------------- |
+| IT         | Project Alpha   |
+| IT         | Project Gamma   |
+| IT         | Project Theta   |
+| HR         | Project Beta    |
+| Finance    | Project Delta   |
+| Finance    | Project Eta     |
+| Marketing  | Project Epsilon |
+| Marketing  | Project Zeta    |
+
+---
+**Query #7**
+
+    -- 7. Count employees per department
+    SELECT department_id, COUNT(*) AS total_employees
+    FROM Employee
+    GROUP BY department_id;
+
+| department_id | total_employees |
+| ------------- | --------------- |
+|               | 1               |
+| 1             | 3               |
+| 2             | 2               |
+| 3             | 2               |
+| 4             | 2               |
+
+---
+**Query #8**
+
+    -- 8. Average salary per department
+    SELECT department_id, AVG(salary) AS avg_salary
+    FROM Employee
+    GROUP BY department_id;
+
+| department_id | avg_salary |
+| ------------- | ---------- |
+|               | 48000.0    |
+| 1             | 65000.0    |
+| 2             | 55000.0    |
+| 3             | 50000.0    |
+| 4             | 61500.0    |
+
+---
+**Query #9**
+
+    -- 9. Departments with more than 2 employees
+    SELECT department_id, COUNT(*) 
+    FROM Employee
+    GROUP BY department_id
+    HAVING COUNT(*) > 2;
+
+| department_id | COUNT(*) |
+| ------------- | -------- |
+| 1             | 3        |
+
+---
+**Query #10**
+
+    -- 10. Employees earning more than average salary
+    SELECT name, salary
+    FROM Employee
+    WHERE salary > (SELECT AVG(salary) FROM Employee);
+
+| name        | salary  |
+| ----------- | ------- |
+| Jane Smith  | 60000.0 |
+| Bob Brown   | 80000.0 |
+| David Green | 70000.0 |
+| Grace Kelly | 65000.0 |
+
+---
+**Query #11**
+
+    -- 11. Employee(s) with highest salary
+    SELECT name, salary
+    FROM Employee
+    WHERE salary = (SELECT MAX(salary) FROM Employee);
+
+| name      | salary  |
+| --------- | ------- |
+| Bob Brown | 80000.0 |
+
+---
+**Query #12**
+
+    -- 12. Employees working in IT department
+    SELECT name
+    FROM Employee
+    WHERE department_id = (
+        SELECT department_id 
+        FROM Department 
+        WHERE name = 'IT'
+    );
+
+| name        |
+| ----------- |
+| John Doe    |
+| Bob Brown   |
+| Grace Kelly |
+
+---
+**Query #13**
+
+    -- 13. Second highest salary
+    SELECT MAX(salary)
+    FROM Employee
+    WHERE salary < (SELECT MAX(salary) FROM Employee);
+
+| MAX(salary) |
+| ----------- |
+| 70000.0     |
+
+---
+**Query #14**
+
+    -- 14. Find duplicate salaries
+    SELECT salary, COUNT(*)
+    FROM Employee
+    GROUP BY salary
+    HAVING COUNT(*) > 1;
+
+| salary  | COUNT(*) |
+| ------- | -------- |
+| 50000.0 | 2        |
+
+---
+**Query #15**
+
+    -- 15. Employees who are not assigned to any department
+    SELECT name
+    FROM Employee
+    WHERE department_id IS NULL;
+
+| name        |
+| ----------- |
+| Frank White |
+
+---
+**Query #16**
+
+    -- 16. Departments without employees
+    SELECT d.name
+    FROM Department d
+    LEFT JOIN Employee e
+    ON d.department_id = e.department_id
+    WHERE e.emp_id IS NULL;
+
+There are no results to be displayed.
+
+---
+**Query #17**
+
+    -- 17. Employees working on projects (via department)
+    SELECT e.name AS employee, p.name AS project
+    FROM Employee e
+    JOIN Project p
+    ON e.department_id = p.department_id;
+
+| employee    | project         |
+| ----------- | --------------- |
+| John Doe    | Project Alpha   |
+| John Doe    | Project Gamma   |
+| John Doe    | Project Theta   |
+| Jane Smith  | Project Beta    |
+| Bob Brown   | Project Alpha   |
+| Bob Brown   | Project Gamma   |
+| Bob Brown   | Project Theta   |
+| Alice Blue  | Project Delta   |
+| Alice Blue  | Project Eta     |
+| Charlie P.  | Project Beta    |
+| David Green | Project Epsilon |
+| David Green | Project Zeta    |
+| Eve Black   | Project Delta   |
+| Eve Black   | Project Eta     |
+| Grace Kelly | Project Alpha   |
+| Grace Kelly | Project Gamma   |
+| Grace Kelly | Project Theta   |
+| Hannah Lee  | Project Epsilon |
+| Hannah Lee  | Project Zeta    |
+
+---
+**Query #18**
+
+    -- 18. Count projects per department
+    SELECT d.name, COUNT(p.project_id) AS total_projects
+    FROM Department d
+    LEFT JOIN Project p
+    ON d.department_id = p.department_id
+    GROUP BY d.name;
+
+| name      | total_projects |
+| --------- | -------------- |
+| Finance   | 2              |
+| HR        | 1              |
+| IT        | 3              |
+| Marketing | 2              |
+
+---
+**Query #19**
+
+    -- 19. Employees in departments with more than 1 project
+    SELECT name
+    FROM Employee
+    WHERE department_id IN (
+        SELECT department_id
+        FROM Project
+        GROUP BY department_id
+        HAVING COUNT(*) > 1
+    );
+
+| name        |
+| ----------- |
+| John Doe    |
+| Bob Brown   |
+| Alice Blue  |
+| David Green |
+| Eve Black   |
+| Grace Kelly |
+| Hannah Lee  |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/)
