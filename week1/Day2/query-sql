@@ -1,5 +1,18 @@
+----select----
 select * from employees;
 select emp_name,salary from employees;
 select emp_name,department from employees;
 select * from employees where department = "IT";
 select emp_name,experience from employees;
+----where----
+select * from employees 
+where salary > 70000;
+select * from employees 
+where city = "hyderabad";
+select * from employees
+where experience < 4;
+select * from employees 
+where department = "finance"; 
+select * from employees 
+where salary = 52000;
+----groupby----
