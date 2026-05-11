@@ -209,3 +209,173 @@
 ---
 
 [View on DB Fiddle](https://www.db-fiddle.com/)
+**Schema (MySQL v5.7)**
+
+    Create table employees(
+        emp_id int,
+        emp_name varchar(50),
+        department varchar(50),
+        salary int,
+        city varchar(50),
+        experience int
+        );
+        
+        insert into employees values
+        (101, 'Rahul', 'IT', 75000, 'Hyderabad', 5),
+        (102, 'Anjali', 'HR', 45000, 'Chennai', 3),
+        (103, 'Kiran', 'IT', 82000, 'Bangalore', 6),
+        (104, 'Sneha', 'Finance', 67000, 'Hyderabad', 4),
+        (105, 'Aman', 'HR', 39000, 'Pune', 2),
+        (106, 'Ravi', 'Finance', 91000, 'Mumbai', 8),
+        (107, 'Divya', 'IT', 55000, 'Chennai', 3),
+        (108, 'Meena', 'Sales', 48000, 'Bangalore', 2),
+        (109, 'Arjun', 'Sales', 61000, 'Hyderabad', 5),
+        (110, 'Pooja', 'IT', 73000, 'Mumbai', 4),
+        (111, 'Vikas', 'HR', 52000, 'Pune', 3),
+        (112, 'Nisha', 'Finance', 88000, 'Bangalore', 7),
+        (113, 'Tarun', 'Sales', 46000, 'Chennai', 2),
+        (114, 'Kavya', 'IT', 97000, 'Hyderabad', 9),
+        (115, 'Manoj', 'Finance', 58000, 'Mumbai', 4);
+
+---
+
+**Query #1**
+
+    select department, sum(salary) as totalsalary
+    from employees
+    group by department;
+
+| department | totalsalary |
+| ---------- | ----------- |
+| Finance    | 304000      |
+| HR         | 136000      |
+| IT         | 382000      |
+| Sales      | 155000      |
+
+---
+**Query #2**
+
+    select department, avg(salary) as averagesalary
+    from employees
+    group by department;
+
+| department | averagesalary |
+| ---------- | ------------- |
+| Finance    | 76000.0       |
+| HR         | 45333.3333    |
+| IT         | 76400.0       |
+| Sales      | 51666.6667    |
+
+---
+**Query #3**
+
+    select city, count(emp_id) as numofemployees
+    from employees
+    group by city;
+
+| city      | numofemployees |
+| --------- | -------------- |
+| Bangalore | 3              |
+| Chennai   | 3              |
+| Hyderabad | 4              |
+| Mumbai    | 3              |
+| Pune      | 2              |
+
+---
+**Query #4**
+
+    select department, max(salary) as maximumsalary
+    from employees
+    group by department;
+
+| department | maximumsalary |
+| ---------- | ------------- |
+| Finance    | 91000         |
+| HR         | 52000         |
+| IT         | 97000         |
+| Sales      | 61000         |
+
+---
+**Query #5**
+
+    select department, min(experience) as minimumexperience
+    from employees
+    group by department;
+
+| department | minimumexperience |
+| ---------- | ----------------- |
+| Finance    | 4                 |
+| HR         | 2                 |
+| IT         | 3                 |
+| Sales      | 2                 |
+
+---
+**Query #6**
+
+    select department, count(emp_id) as employeecount
+    from employees
+    group by department
+    having count(emp_id)>3;
+
+| department | employeecount |
+| ---------- | ------------- |
+| Finance    | 4             |
+| IT         | 5             |
+
+---
+**Query #7**
+
+    select department, avg(salary) as averageemployee
+    from employees
+    group by department
+    having avg(salary)>60000;
+
+| department | averageemployee |
+| ---------- | --------------- |
+| Finance    | 76000.0         |
+| IT         | 76400.0         |
+
+---
+**Query #8**
+
+    select city, count(emp_id) as employeecount
+    from employees
+    group by city
+    having count(emp_id)>2;
+
+| city      | employeecount |
+| --------- | ------------- |
+| Bangalore | 3             |
+| Chennai   | 3             |
+| Hyderabad | 4             |
+| Mumbai    | 3             |
+
+---
+**Query #9**
+
+    select department, sum(salary) as totalsalary
+    from employees
+    group by department
+    having sum(salary)>200000;
+
+| department | totalsalary |
+| ---------- | ----------- |
+| Finance    | 304000      |
+| IT         | 382000      |
+
+---
+**Query #10**
+
+    select department, max(salary) as maximumsalary
+    from employees
+    group by department
+    having max(salary)>90000;
+
+| department | maximumsalary |
+| ---------- | ------------- |
+| Finance    | 91000         |
+| IT         | 97000         |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/)
