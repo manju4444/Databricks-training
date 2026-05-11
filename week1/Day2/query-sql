@@ -1,1 +1,5 @@
-
+select * from employees;
+select emp_name,salary from employees;
+select emp_name,department from employees;
+select * from employees where department = "IT";
+select emp_name,experience from employees;
