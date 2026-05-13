@@ -52,4 +52,22 @@ select department, max(salary) as maximumsalary
 from employees
 group by department
 having max(salary)>90000;
+----top clause----
+select * from Employees
+order by salary desc
+limit 5;
+select * from Employees
+order by experience desc
+limit 3;
+select * from Employees
+where department='Finance'
+order by salary desc
+limit 2;
+select * from Employees
+where city='Hyderabad'
+order by salary desc
+limit 5;
+select * from Employees
+order by salary desc
+limit 1;
 
