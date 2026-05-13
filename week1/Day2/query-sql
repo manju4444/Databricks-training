@@ -87,8 +87,17 @@ select * from Employees
 where salary < 50000;
 select * from Employees
 where experience >5;
-
-
+----logical operator----
+select * from Employees
+where department='IT' and salary>70000;
+select * from Employees
+where city='Hyderabad' OR city='Bangalore';
+select * from Employees
+where department='HR' and experience<3;
+select * from Employees
+where salary>60000 or experience>6;
+select * from Employees
+where department!='Sales';
 
 
 
