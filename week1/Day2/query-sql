@@ -70,4 +70,10 @@ limit 5;
 select * from Employees
 order by salary desc
 limit 1;
+----distinct clause----
+select distinct department from Employees;
+select distinct city from Employees;
+select distinct salary from Employees;
+select distinct experience from Employees;
+select distinct department, city from Employees;
 
