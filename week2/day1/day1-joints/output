@@ -1,1 +1,370 @@
+**Query #1**
 
+| emp_name | manager_name |
+| -------- | ------------ |
+| Karthik  |              |
+| Ajay     | Karthik      |
+| Vijay    | Karthik      |
+| Vinay    | Ajay         |
+| Meena    | Vijay        |
+| Veer     |              |
+| Keerthi  | Vinay        |
+| Priya    | Vinay        |
+
+---
+**Query #2**
+
+| emp_name | dept_name |
+| -------- | --------- |
+| Karthik  | HR        |
+| Ajay     | HR        |
+| Vijay    | IT        |
+| Vinay    | IT        |
+| Meena    | Finance   |
+| Veer     | Marketing |
+| Keerthi  | Sales     |
+| Priya    | Sales     |
+
+---
+**Query #3**
+
+| emp_name | manager_name |
+| -------- | ------------ |
+| Ajay     | Karthik      |
+| Vijay    | Karthik      |
+| Vinay    | Ajay         |
+| Meena    | Vijay        |
+| Keerthi  | Vinay        |
+| Priya    | Vinay        |
+
+---
+**Query #4**
+
+| dept_name | emp_name | salary |
+| --------- | -------- | ------ |
+| HR        | Karthik  |        |
+| HR        | Ajay     |        |
+| IT        | Vijay    |        |
+| IT        | Vinay    |        |
+| Finance   | Meena    |        |
+| Marketing | Veer     |        |
+| Sales     | Keerthi  |        |
+| Sales     | Priya    |        |
+
+---
+**Query #5**
+There are no results to be displayed.
+
+---
+**Query #6**
+
+
+| emp_name | project_name |
+| -------- | ------------ |
+| Karthik  | Project A    |
+| Ajay     | Project B    |
+| Vijay    | Project C    |
+| Vinay    | Project D    |
+| Meena    | Project E    |
+| Veer     |              |
+| Keerthi  |              |
+| Priya    |              |
+
+---
+**Query #7**
+
+| emp_name | project_name |
+| -------- | ------------ |
+| Karthik  | Project A    |
+| Ajay     | Project B    |
+| Vijay    | Project C    |
+| Vinay    | Project D    |
+| Meena    | Project E    |
+
+---
+**Query #8**
+
+| project_name | emp_name |
+| ------------ | -------- |
+| Project A    | Karthik  |
+| Project B    | Ajay     |
+| Project C    | Vijay    |
+| Project D    | Vinay    |
+| Project E    | Meena    |
+
+---
+**Query #9**
+
+| emp_name | salary |
+| -------- | ------ |
+| Karthik  |        |
+| Ajay     |        |
+| Vijay    |        |
+| Vinay    |        |
+| Meena    |        |
+| Veer     |        |
+| Keerthi  |        |
+| Priya    |        |
+
+---
+**Query #10**
+
+| emp_name | dept_name |
+| -------- | --------- |
+| Karthik  | HR        |
+| Ajay     | HR        |
+| Vijay    | IT        |
+| Vinay    | IT        |
+| Meena    | Finance   |
+| Veer     | Marketing |
+| Keerthi  | Sales     |
+| Priya    | Sales     |
+
+---
+**Query #11**
+
+| dept_name | emp_name |
+| --------- | -------- |
+| HR        | Karthik  |
+| HR        | Ajay     |
+| IT        | Vijay    |
+| IT        | Vinay    |
+| Finance   | Meena    |
+| Marketing | Veer     |
+| Sales     | Keerthi  |
+| Sales     | Priya    |
+
+---
+**Query #12**
+
+| emp_name | phone |
+| -------- | ----- |
+| Karthik  |       |
+| Ajay     |       |
+| Vijay    |       |
+| Vinay    |       |
+| Meena    |       |
+| Veer     |       |
+| Keerthi  |       |
+| Priya    |       |
+
+---
+**Query #13**
+| emp_name | dept_name |
+| -------- | --------- |
+| Karthik  | HR        |
+| Ajay     | HR        |
+| Vijay    | IT        |
+| Vinay    | IT        |
+| Meena    | Finance   |
+| Veer     | Marketing |
+| Keerthi  | Sales     |
+| Priya    | Sales     |
+
+---
+**Query #14**
+
+| emp_name | project_name |
+| -------- | ------------ |
+| Veer     |              |
+| Keerthi  |              |
+| Priya    |              |
+
+---
+**Query #15**
+
+| emp_name | project_name |
+| -------- | ------------ |
+| Karthik  | Project A    |
+| Ajay     | Project B    |
+| Vijay    | Project C    |
+| Vinay    | Project D    |
+| Meena    | Project E    |
+| Veer     |              |
+| Keerthi  |              |
+| Priya    |              |
+
+---
+**Query #16**
+
+| project_name | emp_name |
+| ------------ | -------- |
+| Project A    | Karthik  |
+| Project B    | Ajay     |
+| Project C    | Vijay    |
+| Project D    | Vinay    |
+| Project E    | Meena    |
+
+---
+**Query #17**
+
+| emp_name | manager_name | project_name |
+| -------- | ------------ | ------------ |
+| Ajay     | Karthik      | Project B    |
+| Vijay    | Karthik      | Project C    |
+| Vinay    | Ajay         | Project D    |
+| Meena    | Vijay        | Project E    |
+
+---
+**Query #18**
+
+| emp_name | dept_name |
+| -------- | --------- |
+| Karthik  | HR        |
+| Ajay     | HR        |
+| Vijay    | IT        |
+| Vinay    | IT        |
+| Meena    | Finance   |
+| Veer     | Marketing |
+| Keerthi  | Sales     |
+| Priya    | Sales     |
+
+---
+**Query #19**
+
+| emp_name | dept_name |
+| -------- | --------- |
+| Karthik  | HR        |
+| Ajay     | HR        |
+| Vijay    | IT        |
+| Vinay    | IT        |
+| Meena    | Finance   |
+| Veer     | Marketing |
+| Keerthi  | Sales     |
+| Priya    | Sales     |
+
+---
+**Query #20**
+| dept_name | emp_name |
+| --------- | -------- |
+| HR        | Karthik  |
+| HR        | Ajay     |
+| IT        | Vijay    |
+| IT        | Vinay    |
+| Finance   | Meena    |
+| Marketing | Veer     |
+| Sales     | Keerthi  |
+| Sales     | Priya    |
+
+---
+**Query #21**
+
+There are no results to be displayed.
+
+---
+**Query #22**
+
+| dept_name | employee_count |
+| --------- | -------------- |
+| Finance   | 1              |
+| HR        | 2              |
+| IT        | 2              |
+| Marketing | 1              |
+| Sales     | 2              |
+
+---
+**Query #23**
+
+| emp_name | manager_name |
+| -------- | ------------ |
+| Ajay     | Karthik      |
+| Vijay    | Karthik      |
+| Vinay    | Ajay         |
+| Meena    | Vijay        |
+| Keerthi  | Vinay        |
+| Priya    | Vinay        |
+
+---
+**Query #24**
+
+| emp_name | manager_name |
+| -------- | ------------ |
+| Karthik  |              |
+| Ajay     | Karthik      |
+| Vijay    | Karthik      |
+| Vinay    | Ajay         |
+| Meena    | Vijay        |
+| Veer     |              |
+| Keerthi  | Vinay        |
+| Priya    | Vinay        |
+
+---
+**Query #25**
+
+| dept_name | employee_count |
+| --------- | -------------- |
+| Finance   | 1              |
+| HR        | 2              |
+| IT        | 2              |
+| Marketing | 1              |
+| Sales     | 2              |
+
+---
+**Query #26**
+
+| emp_name | dept_name |
+| -------- | --------- |
+| Karthik  | HR        |
+| Ajay     | HR        |
+| Vijay    | IT        |
+| Vinay    | IT        |
+| Meena    | Finance   |
+| Veer     | Marketing |
+| Keerthi  | Sales     |
+| Priya    | Sales     |
+
+---
+**Query #27**
+
+| emp_name |
+| -------- |
+| Karthik  |
+| Ajay     |
+| Vijay    |
+| Vinay    |
+| Meena    |
+| Veer     |
+| Keerthi  |
+| Priya    |
+
+---
+**Query #28**
+
+| emp_name | project_name |
+| -------- | ------------ |
+| Karthik  | Project A    |
+| Ajay     | Project B    |
+| Vijay    | Project C    |
+| Vinay    | Project D    |
+| Meena    | Project E    |
+| Veer     |              |
+| Keerthi  |              |
+| Priya    |              |
+
+---
+**Query #29**
+
+| emp_name | dept_name | project_name |
+| -------- | --------- | ------------ |
+| Karthik  | HR        | Project A    |
+| Ajay     | HR        | Project B    |
+| Vijay    | IT        | Project C    |
+| Vinay    | IT        | Project D    |
+| Meena    | Finance   | Project E    |
+| Veer     | Marketing |              |
+| Keerthi  | Sales     |              |
+| Priya    | Sales     |              |
+
+---
+**Query #30**
+
+| emp_name | dept_name |
+| -------- | --------- |
+| Karthik  | HR        |
+| Ajay     | HR        |
+| Vijay    | IT        |
+| Vinay    | IT        |
+| Meena    | Finance   |
+| Veer     | Marketing |
+| Keerthi  | Sales     |
+| Priya    | Sales     |
