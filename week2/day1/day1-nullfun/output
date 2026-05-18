@@ -1,0 +1,290 @@
+**Query #1**
+
+| emp_id | name  | salary | bonus | manager_id |
+| ------ | ----- | ------ | ----- | ---------- |
+| 2      | John  |        | 5000  | 102        |
+| 4      | David |        |       | 103        |
+| 6      | Kiran |        |       |            |
+| 8      | Neha  |        | 2000  |            |
+
+---
+**Query #2**
+
+| order_id | customer_name | amount | discount | coupon_code |
+| -------- | ------------- | ------ | -------- | ----------- |
+| 102      | John          |        | 50       |             |
+| 105      | Priya         | 1500   | 100      |             |
+| 108      | Neha          |        | 200      | DISC15      |
+
+---
+**Query #3**
+
+| product_id | product_name | price | category | stock |
+| ---------- | ------------ | ----- | -------- | ----- |
+| 3          | Tablet       | 30000 |          | 5     |
+| 4          | Headphones   |       |          |       |
+| 7          | Mouse        | 500   |          |       |
+
+---
+**Query #4**
+
+| null_manager_count |
+| ------------------ |
+| 3                  |
+
+---
+**Query #5**
+
+| name  | salary |
+| ----- | ------ |
+| Amit  | 50000  |
+| John  | 0      |
+| Sara  | 60000  |
+| David | 0      |
+| Priya | 45000  |
+| Kiran | 0      |
+| Ravi  | 70000  |
+| Neha  | 0      |
+
+---
+**Query #6**
+
+| name  | bonus |
+| ----- | ----- |
+| Amit  | 1000  |
+| John  | 5000  |
+| Sara  | 1000  |
+| David | 1000  |
+| Priya | 3000  |
+| Kiran | 1000  |
+| Ravi  | 7000  |
+| Neha  | 2000  |
+
+---
+**Query #7**
+
+| customer_name | amount |
+| ------------- | ------ |
+| Amit          | 1000   |
+| John          | 500    |
+| Sara          | 2000   |
+| David         | 500    |
+| Priya         | 1500   |
+| Kiran         | 500    |
+| Ravi          | 3000   |
+| Neha          | 500    |
+
+---
+**Query #8**
+
+| product_name | stock |
+| ------------ | ----- |
+| Laptop       | 10    |
+| Phone        | 0     |
+| Tablet       | 5     |
+| Headphones   | 0     |
+| Monitor      | 0     |
+| Keyboard     | 15    |
+| Mouse        | 0     |
+| Printer      | 3     |
+
+---
+**Query #9**
+
+| name  | earnings |
+| ----- | -------- |
+| Amit  | 50000    |
+| John  | 5000     |
+| Sara  | 60000    |
+| David |          |
+| Priya | 45000    |
+| Kiran |          |
+| Ravi  | 70000    |
+| Neha  | 2000     |
+
+---
+**Query #10**
+
+| name  | income |
+| ----- | ------ |
+| Amit  | 50000  |
+| John  | 5000   |
+| Sara  | 60000  |
+| David | 0      |
+| Priya | 45000  |
+| Kiran | 0      |
+| Ravi  | 70000  |
+| Neha  | 2000   |
+
+---
+**Query #11**
+
+| product_name | final_price |
+| ------------ | ----------- |
+| Laptop       | 50000       |
+| Phone        | 1000        |
+| Tablet       | 30000       |
+| Headphones   | 1000        |
+| Monitor      | 20000       |
+| Keyboard     | 1000        |
+| Mouse        | 500         |
+| Printer      | 1000        |
+
+---
+**Query #12**
+
+| customer_name | payment |
+| ------------- | ------- |
+| Amit          | 1000    |
+| John          | 50      |
+| Sara          | 2000    |
+| David         | 0       |
+| Priya         | 1500    |
+| Kiran         | 0       |
+| Ravi          | 3000    |
+| Neha          | 200     |
+
+---
+**Query #13**
+
+| name  | salary |
+| ----- | ------ |
+| Amit  | 50000  |
+| John  |        |
+| Sara  | 60000  |
+| David |        |
+| Priya | 45000  |
+| Kiran |        |
+| Ravi  | 70000  |
+| Neha  |        |
+
+---
+**Query #14**
+
+| customer_name | discount |
+| ------------- | -------- |
+| Amit          |          |
+| John          | 50       |
+| Sara          |          |
+| David         |          |
+| Priya         | 100      |
+| Kiran         |          |
+| Ravi          |          |
+| Neha          | 200      |
+
+---
+**Query #15**
+
+| result |
+| ------ |
+|        |
+|        |
+|        |
+|        |
+| 15.0   |
+|        |
+|        |
+|        |
+
+---
+**Query #16**
+
+| customer_name | coupon_code |
+| ------------- | ----------- |
+| Amit          |             |
+| John          |             |
+| Sara          | DISC20      |
+| David         |             |
+| Priya         |             |
+| Kiran         | DISC5       |
+| Ravi          |             |
+| Neha          | DISC15      |
+
+---
+**Query #17**
+
+| name  | total_earnings |
+| ----- | -------------- |
+| Amit  | 50000          |
+| John  | 5000           |
+| Sara  | 60000          |
+| David | 0              |
+| Priya | 48000          |
+| Kiran | 0              |
+| Ravi  | 77000          |
+| Neha  | 2000           |
+
+---
+**Query #18**
+
+| emp_id | name  | salary | bonus | manager_id |
+| ------ | ----- | ------ | ----- | ---------- |
+| 4      | David |        |       | 103        |
+| 6      | Kiran |        |       |            |
+
+---
+**Query #19**
+
+| product_id | product_name | price | category    | stock |
+| ---------- | ------------ | ----- | ----------- | ----- |
+| 2          | Phone        |       | Electronics |       |
+| 6          | Keyboard     |       | Accessories | 15    |
+| 8          | Printer      |       | Electronics | 3     |
+
+---
+**Query #20**
+
+| order_id | customer_name | amount | discount | coupon_code |
+| -------- | ------------- | ------ | -------- | ----------- |
+| 104      | David         |        |          |             |
+| 106      | Kiran         |        |          | DISC5       |
+
+---
+**Query #21**
+
+| name  | income |
+| ----- | ------ |
+| Amit  | 50000  |
+| John  | 5000   |
+| Sara  | 60000  |
+| David | 1000   |
+| Priya | 45000  |
+| Kiran | 1000   |
+| Ravi  | 70000  |
+| Neha  | 2000   |
+
+---
+**Query #22**
+
+| customer_name | discount |
+| ------------- | -------- |
+| Amit          |          |
+| John          | 50       |
+| Sara          |          |
+| David         |          |
+| Priya         | 100      |
+| Kiran         |          |
+| Ravi          |          |
+| Neha          | 200      |
+
+---
+**Query #23**
+
+| customer_name | final_amount |
+| ------------- | ------------ |
+| Amit          | 1000         |
+| John          | -50          |
+| Sara          | 2000         |
+| David         | 0            |
+| Priya         | 1400         |
+| Kiran         | 0            |
+| Ravi          | 3000         |
+| Neha          | -200         |
+
+---
+**Query #24**
+
+| emp_id | name  | salary | bonus | manager_id |
+| ------ | ----- | ------ | ----- | ---------- |
+| 2      | John  |        | 5000  | 102        |
+| 4      | David |        |       | 103        |
