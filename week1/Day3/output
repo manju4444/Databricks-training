@@ -1,0 +1,121 @@
+Output 1:
++----------------+----------------------+
+| student_name   | course_name          |
++----------------+----------------------+
+| Alice Johnson  | SQL Basics           |
+| Bob Smith      | Python Fundamentals  |
+| Charlie Brown  | Data Analytics       |
+| Diana Prince   | NULL                 |
+| Ethan Hunt     | NULL                 |
++----------------+----------------------+
+
+
+Output 2:
++------------------+
+| course_name      |
++------------------+
+| Cloud Computing  |
+| Machine Learning |
++------------------+
+
+
+Output 3:
++------------------+----------------------+
+| instructor_name  | course_name          |
++------------------+----------------------+
+| John Doe         | SQL Basics           |
+| Jane Smith       | Python Fundamentals  |
+| Robert Brown     | Cloud Computing      |
+| Emily Davis      | NULL                 |
++------------------+----------------------+
+
+
+Output 4:
++------------------+
+| course_name      |
++------------------+
+| Data Analytics   |
+| Machine Learning |
++------------------+
+
+
+Output 5:
++----------------+-----------+
+| student_name   | course_id |
++----------------+-----------+
+| Alice Johnson  | 101       |
+| Bob Smith      | 102       |
+| Charlie Brown  | 103       |
++----------------+-----------+
+
+
+Output 6:
++----------------+
+| student_name   |
++----------------+
+| Diana Prince   |
+| Ethan Hunt     |
++----------------+
+
+
+Output 7:
++----------------+-----------+
+| student_name   | course_id |
++----------------+-----------+
+| Alice Johnson  | 101       |
+| Bob Smith      | 102       |
+| Charlie Brown  | 103       |
+| Diana Prince   | NULL      |
+| Ethan Hunt     | NULL      |
++----------------+-----------+
+
+
+Output 8:
++------------------+
+| course_name      |
++------------------+
+| Cloud Computing  |
+| Machine Learning |
++------------------+
+
+
+Output 9:
++------------------+----------------------+
+| instructor_name  | course_name          |
++------------------+----------------------+
+| John Doe         | SQL Basics           |
+| Jane Smith       | Python Fundamentals  |
+| Robert Brown     | Cloud Computing      |
+| NULL             | Data Analytics       |
+| NULL             | Machine Learning     |
+| Emily Davis      | NULL                 |
++------------------+----------------------+
+
+
+Output 10:
++----------------+----------------------+------------------+
+| student_name   | course_name          | instructor_name  |
++----------------+----------------------+------------------+
+| Alice Johnson  | SQL Basics           | John Doe         |
+| Bob Smith      | Python Fundamentals  | Jane Smith       |
+| Charlie Brown  | Data Analytics       | NULL             |
+| Diana Prince   | NULL                 | NULL             |
+| Ethan Hunt     | NULL                 | NULL             |
++----------------+----------------------+------------------+
+
+
+Bonus Output:
++----------------+----------------------+
+| student_name   | course_name          |
++----------------+----------------------+
+| Alice Johnson  | SQL Basics           |
+| Alice Johnson  | Python Fundamentals  |
+| Alice Johnson  | Data Analytics       |
+| Alice Johnson  | Cloud Computing      |
+| Alice Johnson  | Machine Learning     |
+| Bob Smith      | SQL Basics           |
+| Bob Smith      | Python Fundamentals  |
+| Bob Smith      | Data Analytics       |
+| Bob Smith      | Cloud Computing      |
+| Bob Smith      | Machine Learning     |
++----------------+----------------------+
